@@ -22,7 +22,7 @@ from imblearn.pipeline import make_pipeline
 
 
 
-dataset = pd.read_csv('D:/Python/finalfiles/train-5.csv', encoding="ISO-8859-1")
+dataset = pd.read_csv('filepath.csv', encoding="ISO-8859-1")
 lst = ['How','When','Where','Which','What','I', 'about','me','please', ' ']
 #unlising list of list
 #lst_un = ' '.join(str(r) for x in lst for r in x )
@@ -82,5 +82,5 @@ cr = classification_report(y_test, predict,labels=np.unique(predict))
 accuracy_score = accuracy_score(y_test, predict)
 f1_score = f1_score(y_test, predict,average='weighted')
 
-joblib.dump(grid.best_estimator_,'D:/Python/finalfiles/model.pkl')
+joblib.dump(grid.best_estimator_,'filepath.pkl')
     
